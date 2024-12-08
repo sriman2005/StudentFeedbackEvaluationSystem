@@ -1,0 +1,150 @@
+.student-dashboard {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+.student-sidebar {
+    width: 250px;
+    background-color: var(--sidebar-background);
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-logo h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 24px;
+}
+
+.student-nav ul {
+    list-style-type: none;
+}
+
+.student-nav li {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.student-nav li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.student-nav li.active {
+    background-color: var(--primary-color);
+}
+
+.student-nav li span {
+    margin-left: 10px;
+}
+
+.student-main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: var(--background-color);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f4f7f6;
+    --text-color: #2c3e50;
+    --card-background: #ffffff;
+    --sidebar-background: #2c3e50;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .student-dashboard {
+        flex-direction: column;
+    }
+
+    .student-sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .student-nav {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .student-nav li {
+        flex-grow: 1;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-content {
+        width: 90%;
+        margin: 0 5%;
+    }
+}
+/* Logout Button Styles */
+.logout-btn {
+    position: absolute;
+    top: 20px;  /* Adjust this value to move the button down/up */
+    right: 20px; /* Adjust this value to move the button left/right */
+    padding: 12px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000; /* Ensure the button is always on top */
+}
+
+/* Hover and Focus Effects */
+.logout-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.logout-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.8); /* Focus shadow effect */
+}
+
+/* Animated Fade-in Effect */
+.student-dashboard {
+    position: relative; /* Ensure the button can be positioned absolutely */
+}
+
+.logout-btn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframe for Fade-in Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Initially positioned above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+    }
+}
+

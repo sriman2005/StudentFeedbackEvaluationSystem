@@ -1,0 +1,72 @@
+.admin-dashboard {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f6f9;
+}
+
+.admin-sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 20px;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar-logo h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.admin-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-nav ul li {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-nav ul li:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.admin-nav ul li.active {
+    background: rgba(255,255,255,0.3);
+}
+
+.admin-main-content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #f9fafc;
+}
+
+
+
+
+
+
+.logout-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.logout-button {
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+}

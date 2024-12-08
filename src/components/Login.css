@@ -1,0 +1,153 @@
+/* Login Page Styles */
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    background-image: url('./background.jpg'); /* Replace with actual background image path */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.page-title {
+    color: #3b5998;
+    font-size: 36px; /* Slightly larger for better visibility */
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 20px 0;
+    background: linear-gradient(to right, #3b5998, #8b9dc3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9); /* Added transparency for depth */
+    border-radius: 20px; /* Softer edges for modern look */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+    padding: 50px; /* Added padding for cleaner layout */
+    width: 90%;
+    max-width: 500px; /* Slightly wider box for comfort */
+    height: auto;
+    animation: fadeIn 0.6s ease-in-out;
+    margin-top: 80px;
+}
+
+.login-container:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-header h2 {
+    text-align: center;
+    color: #3b5998;
+    margin-bottom: 20px; /* Adjusted spacing for better visual balance */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 14px; /* Slightly increased for better usability */
+    margin-bottom: 20px;
+    border: 1px solid #dfe3ee;
+    border-radius: 30px; /* More rounded edges for inputs */
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container input:focus {
+    outline: none;
+    border-color: #3b5998;
+    box-shadow: 0 0 10px rgba(59, 89, 152, 0.5); /* More pronounced focus state */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #3b5998, #8b9dc3);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container button:hover {
+    background: linear-gradient(to right, #8b9dc3, #3b5998);
+    box-shadow: 0 8px 20px rgba(59, 89, 152, 0.4);
+}
+
+.login-container p {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.login-container p span {
+    color: #3b5998;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-container p span:hover {
+    color: #8b9dc3;
+    text-decoration: underline;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer p a {
+    color: #3b5998;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px;
+        width: 100%;
+        margin: 20px;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+}
